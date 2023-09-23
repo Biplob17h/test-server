@@ -3,7 +3,9 @@ import Test from "../model/testmodel.js";
 export const getAllData = async (req, res) => {
   try {
     const test = await Test.find({});
-    res.json({ message: "Hello, World!" });
+    res.json({
+      data: test,
+    });
   } catch (error) {
     res.send(error);
   }
